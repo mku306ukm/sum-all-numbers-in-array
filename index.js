@@ -1,6 +1,11 @@
 
-const sum = function(arr) {
-    if (arr.length < 1) return 0;
-    return arr.pop() + sum(arr);
+
+function sum(){
+    console.log(arguments);
+    let sum = 0;
+    for(let i in arguments){
+        sum += arguments[i];
+    }
+    document.write(sum);
 }
-document.write(sum([10,2,8,4]))
+sum(10,2,8,4);
